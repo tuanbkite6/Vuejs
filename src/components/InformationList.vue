@@ -25,5 +25,13 @@ export default {
   props : {
     users : Array
   },
+  method : {
+    addNewUser(newUser) {
+      this.$emit("add-user", newUser);
+      console.log(this.users);
+      console.log("Form submited");
+    },
+        
+  }
 };
 </script>

@@ -81,13 +81,12 @@ export default {
     },
     submitForm() {
       const newUser = {
-        name: "New User",
-        age: 0,
-        job: "Unknown",
-        gender: "Other",
+        name: this.name ,
+        age: this.c,
+        job: this.job ,
+        gender: this.gender,
       }
       this.addUser(newUser);
-      console.log("Form submitted")
       console.log(this.users)
     },
 }
