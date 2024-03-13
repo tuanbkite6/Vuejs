@@ -89,14 +89,8 @@ export default {
         job: this.job ,
         gender: this.gender,
       }
-<<<<<<< HEAD
-      this.addUser(newUser);
-      this.$emit('update-user', this.newUser)
-      console.log(this.users)
-=======
       this.users.push(newUser);
       console.log(this.users);
->>>>>>> 27fbbb4a95eddc8c7edc81d3321178c9b7bd6eb9
     },
 }
 }
