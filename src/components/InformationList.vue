@@ -8,7 +8,7 @@
                     <th>Job</th>
                     <th>Gender</th>
                 </tr>
-                <tr class="list" v-for="user in users" :key="user">
+                <tr class="list" v-for="user in users" :key="user.NAME">
                     <td>{{ user.name }}</td>
                     <td>{{ user.age }}</td>
                     <td>{{ user.job }}</td>
@@ -25,13 +25,6 @@ export default {
   props : {
     users : Array
   },
-  method : {
-    addNewUser(newUser) {
-      this.$emit("add-user", newUser);
-      console.log(this.users);
-      console.log("Form submited");
-    },
-        
-  }
+      
 };
 </script>

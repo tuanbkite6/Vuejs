@@ -41,10 +41,11 @@
           <option value="3">Female</option>
           <option value="4">Other</option>
         </select>
-        <button type="submit" v-on:click = "submitForm()">Submit</button>
+        <button type="submit" @click = "submitForm">Submit</button>
       </tr>
     </th>
   </div>
+  <InformationList :users="users"/>
   <h1 v-if="gender == null">Welcome to testing</h1>
   <h1 v-else-if="gender == 2">You is perfect man</h1>
   <h1 v-if="gender == 3">Are you really woman?</h1>
@@ -61,12 +62,17 @@ export default {
       a: 0,
       b: 0,
       c: null,
+      name: "",
+      job: "",
+      gender: null,
       users: [],
     };
   },
   component: {
     InformationList,
   },
+  
+
   methods: {
     clickA: function () {
       console.log("Call A method");
@@ -76,9 +82,6 @@ export default {
       console.log("Call B method");
       return this.b++;
     },
-    addUser: function (newUser) {
-      this.users.push(newUser);
-    },
     submitForm() {
       const newUser = {
         name: this.name ,
@@ -86,8 +89,8 @@ export default {
         job: this.job ,
         gender: this.gender,
       }
-      this.addUser(newUser);
-      console.log(this.users)
+      this.users.push(newUser);
+      console.log(this.users);
     },
 }
 }
