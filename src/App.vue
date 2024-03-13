@@ -1,6 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <InformationList/>
+  <InformationList :users = "users" @update-user="uset = $event"/>
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 

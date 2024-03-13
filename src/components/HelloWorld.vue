@@ -87,6 +87,7 @@ export default {
         gender: this.gender,
       }
       this.addUser(newUser);
+      this.$emit('update-user', this.newUser)
       console.log(this.users)
     },
 }

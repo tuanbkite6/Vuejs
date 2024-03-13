@@ -23,15 +23,7 @@
 export default {
   name: "InformationList",
   props : {
-    users : Array
+    users : []
   },
-  method : {
-    addNewUser(newUser) {
-      this.$emit("add-user", newUser);
-      console.log(this.users);
-      console.log("Form submited");
-    },
-        
-  }
 };
 </script>
