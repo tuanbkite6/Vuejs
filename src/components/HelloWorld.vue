@@ -41,11 +41,11 @@
           <option value="3">Female</option>
           <option value="4">Other</option>
         </select>
-        <button type="submit" @click = "submitForm">Submit</button>
+        <button type="submit" @click="submitForm">Submit</button>
       </tr>
     </th>
   </div>
-  <InformationList :users="users"/>
+  <InformationList v-bind:users="users" />
   <h1 v-if="gender == null">Welcome to testing</h1>
   <h1 v-else-if="gender == 2">You is perfect man</h1>
   <h1 v-if="gender == 3">Are you really woman?</h1>
@@ -69,9 +69,8 @@ export default {
     };
   },
   component: {
-    InformationList,
+    "information-list":InformationList ,
   },
-  
 
   methods: {
     clickA: function () {
@@ -84,20 +83,14 @@ export default {
     },
     submitForm() {
       const newUser = {
-        name: this.name ,
+        name: this.name,
         age: this.c,
-        job: this.job ,
+        job: this.job,
         gender: this.gender,
-      }
-<<<<<<< HEAD
-      this.addUser(newUser);
-      this.$emit('update-user', this.newUser)
-      console.log(this.users)
-=======
-      this.users.push(newUser);
+      };
+      this.users.push(newUser)
       console.log(this.users);
->>>>>>> 27fbbb4a95eddc8c7edc81d3321178c9b7bd6eb9
     },
-}
-}
+  },
+};
 </script>

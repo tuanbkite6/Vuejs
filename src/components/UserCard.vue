@@ -8,7 +8,7 @@
         <app-user-detail v-bind:age="age"></app-user-detail>
       </div>
       <div class="col-xs-12 col-sm-6 col-6">
-        <app-user-edit></app-user-edit>
+        <app-user-edit v-bind:age="age"></app-user-edit>
       </div>
     </div>
   </div>
@@ -22,7 +22,7 @@ export default {
   data: function () {
     return {
       name: "Duy",
-      age: 25,
+      age: 27,
     };
   },
 

@@ -21,10 +21,10 @@
   </template>
   <script>
   export default {
-    name: "InformationList",
     props : {
-      users : Array
+      users : []
     },
+
         
   };
   </script>
