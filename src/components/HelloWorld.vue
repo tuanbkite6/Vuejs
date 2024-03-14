@@ -87,8 +87,13 @@ export default {
         age: this.c,
         job: this.job,
         gender: this.gender,
+<<<<<<< HEAD
       };
       this.users.push(newUser)
+=======
+      }
+      this.users.push(newUser);
+>>>>>>> e5a729d20b2cc4d685622e067c44d3d496af773a
       console.log(this.users);
     },
   },
